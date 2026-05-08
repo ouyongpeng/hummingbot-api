@@ -182,3 +182,6 @@ bots/conf/
 # IDE files
 .vscode/
 .idea/
+
+# Mac
+.DS_Store
