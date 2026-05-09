@@ -124,9 +124,17 @@ celerybeat.pid
 
 # Environments
 .env
-.env.secrets
+.env.*
+!.env.example
 *.key
 *.pem
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+id_ecdsa*
+credentials.json
+service-account*.json
 .venv
 env/
 venv/
@@ -185,3 +193,18 @@ bots/conf/
 
 # Mac
 **/.DS_Store
+Thumbs.db
+
+# Backup and swap files
+*.bak
+*.backup
+*.orig
+*.swp
+*~
+
+# Database
+*.db
+*.sqlite
+
+# Docker overrides (may contain local secrets)
+docker-compose.override.yml
